@@ -1,12 +1,230 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>iPadで作ったページ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>身近な人を守る！SNS型投資詐欺の罠と対策</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1ff;--fg:#151a4a;--sub:#4b5088;--card:#fff;--line:#d3d9f7;--pri:#2b2fd9;--pri-t:#fff;--warn:#ff4f6d;--warnbg:#ffe6ea;--sun:#ffd84d;--ok:#12805c;--okbg:#dff5ea;--bub:#e4e8ff;--me:#c8f0d8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1130;--fg:#eceeff;--sub:#a9aee6;--card:#181c4a;--line:#2c3273;--pri:#8a8dff;--pri-t:#0e1130;--warn:#ff7d94;--warnbg:#3d1a30;--ok:#6fd8ac;--okbg:#123a30;--bub:#232869;--me:#1f5a45}}
+:root[data-theme="dark"]{--bg:#0e1130;--fg:#eceeff;--sub:#a9aee6;--card:#181c4a;--line:#2c3273;--pri:#8a8dff;--pri-t:#0e1130;--warn:#ff7d94;--warnbg:#3d1a30;--ok:#6fd8ac;--okbg:#123a30;--bub:#232869;--me:#1f5a45}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:500;font-size:17px;line-height:1.85}
+.w{max-width:760px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px}
+h2{font-size:clamp(23px,5vw,30px);line-height:1.4;margin:0 0 12px;font-weight:900}
+h3{font-size:19px;margin:0 0 4px;font-weight:900}
+p{margin:0 0 1em;max-width:36em}
+a{color:var(--pri)}
+:focus-visible{outline:3px solid var(--warn);outline-offset:3px}
+.hero{padding:40px 0 24px}
+.hero .w{display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
+@media(min-width:760px){.hero .w{grid-template-columns:1.25fr 1fr;max-width:960px}}
+.tag{display:inline-block;background:var(--sun);color:#151a4a;font-weight:900;padding:4px 14px;border-radius:99px;font-size:15px;margin-bottom:16px}
+h1{font-size:clamp(32px,8vw,52px);line-height:1.25;margin:0 0 16px;font-weight:900}
+.sub{font-size:19px;font-weight:700;color:var(--sub)}
+.phone{width:min(290px,100%);margin:0 auto;background:var(--card);border:3px solid var(--fg);border-radius:32px;padding:14px 12px 18px;transform:rotate(3deg);box-shadow:8px 8px 0 var(--pri)}
+.phone .top{font-size:13px;font-weight:700;text-align:center;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:10px}
+.phone .m{max-width:88%;padding:7px 11px;border-radius:14px;background:var(--bub);font-size:14px;line-height:1.5;margin:0 0 8px}
+.phone .m.me{margin-left:auto;background:var(--me)}
+.phone .n{font-size:11px;color:var(--sub);margin:0 0 1px 4px}
+.alert{display:flex;gap:8px;background:var(--warn);color:#fff;font-weight:900;font-size:14px;border-radius:12px;padding:8px 12px;margin-top:10px;line-height:1.5}
+.who{font-size:15px;margin-top:20px;padding:10px 16px;border:2px dashed var(--pri);border-radius:14px;display:inline-block}
+.lead{font-size:20px;font-weight:900;line-height:1.6}
+.three{display:grid;gap:10px;margin:18px 0;padding:0;list-style:none}
+.three li{background:var(--card);border-radius:14px;padding:12px 16px;border:2px solid var(--line)}
+.steps{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px;counter-reset:s}
+.steps li{position:relative;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px 16px 14px 64px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:14px;width:36px;height:36px;border-radius:50%;background:var(--pri);color:var(--pri-t);display:grid;place-items:center;font-weight:900}
+.steps li:last-child{border-color:var(--warn);background:var(--warnbg)}
+.steps small{color:var(--sub);font-weight:700;font-size:14px}
+.signs{list-style:none;padding:0;margin:20px 0;display:grid;gap:12px}
+.signs li{display:flex;gap:14px;background:var(--warnbg);border-left:8px solid var(--warn);border-radius:0 14px 14px 0;padding:14px 16px}
+.signs .i{font-size:28px;line-height:1.3}
+.set{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px}
+.set li{display:grid;grid-template-columns:1fr;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
+@media(min-width:600px){.set li{grid-template-columns:1fr 210px;align-items:center}}
+.scr{background:var(--bg);border:2px solid var(--fg);border-radius:14px;padding:10px 12px;font-size:14px}
+.scr .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);gap:8px}
+.scr .row:last-child{border:0}
+.scr .hl{background:var(--sun);color:#151a4a;border-radius:8px;padding:4px 8px;font-weight:900}
+.tg{width:38px;height:22px;border-radius:99px;background:#9aa0c8;position:relative;flex:none}
+.tg::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff}
+.rules{display:grid;gap:12px;margin:18px 0;padding:0;list-style:none}
+.rules li{background:var(--card);border-radius:14px;padding:14px 16px;border:2px solid var(--line)}
+.rules b{color:var(--warn)}
+.tel{display:grid;gap:12px;margin:18px 0}
+.tel a{display:block;text-decoration:none;background:var(--pri);color:var(--pri-t);border-radius:16px;padding:14px 18px;font-weight:900;line-height:1.4}
+.tel .num{font-size:34px;display:block}
+.tel span.s{font-size:14px;font-weight:700;opacity:.92}
+.tel a.p{background:var(--fg);color:var(--bg)}
+.share{display:grid;gap:12px;margin:18px 0}
+.btn{font:inherit;font-weight:900;font-size:17px;border:0;border-radius:14px;padding:14px 18px;cursor:pointer;text-align:center;text-decoration:none;display:block;color:#fff;background:#0f8f4a}
+.btn.g{background:var(--card);color:var(--fg);border:2px solid var(--fg)}
+#msg{font-size:14px;color:var(--sub);min-height:1.6em}
+.q{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:0 0 14px}
+.q p{font-weight:900;margin-bottom:10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:inherit;font-weight:700;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer}
+.opt[aria-pressed="true"]{border-color:var(--pri);background:var(--pri);color:var(--pri-t)}
+.fb{display:none;margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--okbg);border-left:6px solid var(--ok);font-size:15.5px;line-height:1.7}
+.fb.ng{background:var(--warnbg);border-color:var(--warn)}
+.fb.show{display:block}
+#score{font-weight:900;font-size:18px}
+footer{margin-top:56px;padding:20px 0 40px;font-size:14px;color:var(--sub);border-top:2px solid var(--line)}
+@media (prefers-reduced-motion:no-preference){.phone{animation:tilt 1.2s ease-out}@keyframes tilt{from{transform:rotate(-4deg) translateY(12px);opacity:0}}}
+</style>
 </head>
 <body>
-  <h1>こんにちは！</h1>
-  <p>iPadとSafariだけでWebページを作りました。</p>
+
+<header class="hero"><div class="w">
+<div>
+<span class="tag">10代、20代のあなたや、大切な友人・家族へ</span>
+<h1>身近な人を守る！SNS型投資詐欺の罠と対策</h1>
+<p class="sub">LINEグループに誘われたら要注意。知っておくべき3つの防犯ポイント</p>
+<p class="who">手口を知る ／ 設定を変える ／ すぐ相談する</p>
+</div>
+<div class="phone" role="img" aria-label="LINEグループで儲け話が盛り上がっているスマホ画面のイラスト。注意の表示が出ている">
+<div class="top">💬 投資勉強会（128人）</div>
+<div class="n">先生</div><div class="m">今日も全員プラスです！</div>
+<div class="n">みさき</div><div class="m">先生のおかげで+42万円！</div>
+<div class="m me">私も始めたいです</div>
+<div class="alert"><span>⚠️</span><span>みんなが儲かっている？ 全員サクラかも</span></div>
+</div>
+</div></header>
+
+<main class="w">
+<section id="intro">
+<h2>知らないLINEグループに突然追加されたことはありませんか？</h2>
+<p class="lead">「絶対に儲かる」は、あなたのお金が目的のセリフです。</p>
+<p>最近、SNSの広告やDMから「絶対儲かる投資」に誘導され、数百万〜数千万円をだまし取られる被害が相次いでいます。</p>
+<p>自分は大丈夫と思っていても、巧妙な手口で信じてしまいます。このページで、手口と予防策を3分で確認しましょう。</p>
+<ul class="three">
+<li><b>ポイント1</b>　手口を知る（→ <a href="#steps">4ステップ</a>と<a href="#signs">危険サイン</a>）</li>
+<li><b>ポイント2</b>　LINEの設定を変える（→ <a href="#line">設定方法</a>）</li>
+<li><b>ポイント3</b>　困ったらすぐ相談する（→ <a href="#help">相談窓口</a>）</li>
+</ul>
+</section>
+
+<section id="steps">
+<h2>詐欺の4ステップ</h2>
+<p>ほとんどの被害は、この順番で進みます。</p>
+<ol class="steps">
+<li><h3>接点</h3>SNS広告やDMから、LINEグループへ誘導されます。<br><small>有名人の写真や名前が、無断で使われていることもあります。</small></li>
+<li><h3>信用づくり</h3>グループには多数の「サクラ（仲間役）」がいて、「儲かった！」「先生のおかげです！」と全員で盛り上げます。<br><small>あなたを「乗り遅れたくない」気持ちにさせるための演出です。</small></li>
+<li><h3>誘導・送金</h3>アプリや偽サイトで、うその利益を見せて振込を促します。<br><small>画面の数字は作り物です。</small></li>
+<li><h3>破綻</h3>出金しようとすると、「手数料」や「税金」を追加で請求され、最後は連絡が取れなくなります。<br><small>払っても、お金は戻りません。</small></li>
+</ol>
+</section>
+
+<section id="signs">
+<h2>危険サインのチェックリスト</h2>
+<p>ひとつでも当てはまったら、お金を動かす前に止まってください。</p>
+<ul class="signs">
+<li><span class="i">⚠️</span><div><h3>サイン1：「先生」を持ち上げる書き込みが多い</h3>グループ内で「先生」「アナリスト」と呼ばれる人物を、何人もがほめ続けています。</div></li>
+<li><span class="i">🚨</span><div><h3>サイン2：振込先が個人名義、または無関係な法人名義</h3>投資会社と関係のない名前の口座は、詐欺を疑ってください。口座名義は毎回変わることもあります。</div></li>
+<li><span class="i">🛑</span><div><h3>サイン3：出金に「手数料・税金を先に振り込んで」と言われる</h3>これは典型的な詐欺の請求です。払わずに、相談窓口へ連絡してください。</div></li>
+<li><span class="i">⏰</span><div><h3>おまけ：「今日まで」「あと3名」と急がされる</h3>考える時間をなくすための決まり文句です。</div></li>
+</ul>
+</section>
+
+<section id="line">
+<h2>今すぐできる防犯策：LINEの設定</h2>
+<p>知らない人とつながる入口を、先に閉じておきましょう。1分で終わります。</p>
+<ol class="set">
+<li><div><h3>1. 設定（歯車マーク）を開く</h3>LINEの「ホーム」画面の右上にある歯車マークをタップします。</div>
+<div class="scr"><div class="row"><span>👤 プロフィール</span></div><div class="row"><span class="hl">⚙️ 設定</span></div></div></li>
+<li><div><h3>2. 「友だち」を選ぶ</h3>設定の一覧から「友だち」をタップします。</div>
+<div class="scr"><div class="row"><span>アカウント</span></div><div class="row"><span class="hl">友だち</span></div><div class="row"><span>トーク</span></div></div></li>
+<li><div><h3>3. 2つの項目をオフにする</h3>「友だち自動追加」と「友だちへの追加を許可」をオフにします。</div>
+<div class="scr"><div class="row"><span class="hl">友だち自動追加</span><span class="tg"></span></div><div class="row"><span class="hl">友だちへの追加を許可</span><span class="tg"></span></div></div></li>
+<li><div><h3>4. ID検索を制限する</h3>設定の「プライバシー管理」を開き、「IDによる友だち追加を許可」をオフにします。</div>
+<div class="scr"><div class="row"><span>プライバシー管理</span></div><div class="row"><span class="hl">IDによる友だち追加を許可</span><span class="tg"></span></div></div></li>
+</ol>
+<p><small>※アプリの更新で、項目名や場所が変わることがあります。見つからないときは、設定画面の検索で「友だち」や「ID」を探してください。</small></p>
+</section>
+
+<section id="help">
+<h2>対処法・相談窓口</h2>
+<h3>3つの鉄則</h3>
+<ul class="rules">
+<li><b>追加送金は絶対にしない。</b>手数料を払っても、お金は戻りません。</li>
+<li><b>証拠を残す。</b>やり取りのスクリーンショットや振込明細を保存します。相手のアカウント名やURLも控えてください。</li>
+<li><b>すぐに相談する。</b>恥ずかしいことではありません。だまされるのは、手口が巧妙だからです。</li>
+</ul>
+<div class="tel">
+<a href="tel:188"><span class="num">188</span>消費者ホットライン（いやや！）<br><span class="s">タップして発信。近くの消費生活センターにつながります</span></a>
+<a href="tel:%239110" class="p"><span class="num">#9110</span>警察相談専用電話<br><span class="s">タップして発信。被害の相談や手口の確認に</span></a>
+</div>
+<p>いま危険が迫っているときは、迷わず110番へ。すでに振り込んだ場合は、振込先の銀行にも早めに連絡してください。</p>
+</section>
+
+<section id="share">
+<h2>詐欺の手口を知っておくだけで、自分や大切な友人を守れます</h2>
+<p>このページを、まだ知らない人に送ってください。</p>
+<div class="share">
+<a class="btn" id="l1" target="_blank" rel="noopener">LINEで大切な友人に教える</a>
+<a class="btn" id="l2" target="_blank" rel="noopener">家族LINEに共有する</a>
+<button class="btn g" id="cp" type="button">リンクをコピーする</button>
+</div>
+<div id="msg" role="status" aria-live="polite"></div>
+</section>
+
+<section id="quiz">
+<h2>理解度チェック（3問）</h2>
+<p>選ぶとすぐに解説が出ます。回答はこの端末の画面内だけで判定し、送信や保存はしません。</p>
+
+<div class="q" data-ans="0"><p>Q1．投資の振込先が「個人名義」の場合、どう判断しますか？</p>
+<div class="opts"><button class="opt" type="button" aria-pressed="false">詐欺を疑う</button><button class="opt" type="button" aria-pressed="false">問題ない</button></div>
+<div class="fb" data-ok="正解です。個人名義の口座への振込を求める投資話は、詐欺の典型です。" data-ng="残念。個人名義の口座を指定する投資話は、詐欺を強く疑ってください。"></div></div>
+
+<div class="q" data-ans="0"><p>Q2．困ったときの消費者ホットラインの番号は？</p>
+<div class="opts"><button class="opt" type="button" aria-pressed="false">188</button><button class="opt" type="button" aria-pressed="false">110</button></div>
+<div class="fb" data-ok="正解です。188（いやや！）は消費者ホットライン。110は警察の緊急通報です。" data-ng="188が消費者ホットラインです。110は警察への緊急通報なので、使い分けましょう。"></div></div>
+
+<div class="q" data-ans="-1"><p>Q3．LINEの自動追加設定をオフにしましたか？</p>
+<div class="opts"><button class="opt" type="button" aria-pressed="false">した</button><button class="opt" type="button" aria-pressed="false">もともとしていた</button><button class="opt" type="button" aria-pressed="false">あとでする</button></div>
+<div class="fb" data-ok="いいですね。その設定を、家族や友人にも教えてあげてください。" data-ng="「あとで」は忘れがちです。<a href='#line'>設定の手順</a>を見ながら、いま1分で済ませましょう。"></div></div>
+
+<p id="score" role="status" aria-live="polite"></p>
+</section>
+</main>
+
+<div class="w"><footer>この情報は一般的な注意喚起です。個別の被害や法律の判断は、警察、消費生活センター、弁護士などの専門窓口にご相談ください。</footer></div>
+
+<script>
+var url=location.href,ttl='SNS型投資詐欺の手口と対策、3分で読めるよ。知らないLINEグループに誘われたら要注意！';
+function ln(t){return 'https://line.me/R/share?text='+encodeURIComponent(t+'\n'+url)}
+document.getElementById('l1').href=ln(ttl);
+document.getElementById('l2').href=ln('家族へ：SNSやLINEの「必ず儲かる」投資話は詐欺のことが多いそうです。手口と相談先がまとまっているので見ておいてね。');
+document.getElementById('cp').addEventListener('click',function(){
+  var m=document.getElementById('msg');
+  try{navigator.clipboard.writeText(url).then(function(){m.textContent='リンクをコピーしました。'},function(){m.textContent='コピーできませんでした。アドレスバーのURLをコピーしてください。'})}
+  catch(e){m.textContent='コピーできませんでした。アドレスバーのURLをコピーしてください。'}
+});
+var qs=document.querySelectorAll('.q');
+function tally(){
+  var a=0,c=0;
+  qs.forEach(function(q){if(q.dataset.done){a++;if(q.dataset.right==='1')c++}});
+  if(a===qs.length){document.getElementById('score').textContent='結果：'+c+' / 3 問が理解できています。'+(c===3?'バッチリです！':'解説を読み返して、周りにも教えてあげましょう。')}
+}
+qs.forEach(function(q){
+  var ans=parseInt(q.dataset.ans,10),bs=q.querySelectorAll('.opt'),fb=q.querySelector('.fb');
+  bs.forEach(function(b,i){
+    b.addEventListener('click',function(){
+      bs.forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed','true');
+      var ok=ans===-1?i<2:i===ans;
+      fb.innerHTML=ok?fb.dataset.ok:fb.dataset.ng;
+      fb.className='fb show'+(ok?'':' ng');
+      q.dataset.done='1';q.dataset.right=ok?'1':'0';
+      tally();
+    });
+  });
+});
+</script>
 </body>
 </html>
-

@@ -3,213 +3,256 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>身近な人を守る！SNS型投資詐欺の罠と対策</title>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<title>【WARNING】SNS型投資詐欺の罠と対策</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef1ff;--fg:#151a4a;--sub:#4b5088;--card:#fff;--line:#d3d9f7;--pri:#2b2fd9;--pri-t:#fff;--warn:#ff4f6d;--warnbg:#ffe6ea;--sun:#ffd84d;--ok:#12805c;--okbg:#dff5ea;--bub:#e4e8ff;--me:#c8f0d8;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1130;--fg:#eceeff;--sub:#a9aee6;--card:#181c4a;--line:#2c3273;--pri:#8a8dff;--pri-t:#0e1130;--warn:#ff7d94;--warnbg:#3d1a30;--ok:#6fd8ac;--okbg:#123a30;--bub:#232869;--me:#1f5a45}}
-:root[data-theme="dark"]{--bg:#0e1130;--fg:#eceeff;--sub:#a9aee6;--card:#181c4a;--line:#2c3273;--pri:#8a8dff;--pri-t:#0e1130;--warn:#ff7d94;--warnbg:#3d1a30;--ok:#6fd8ac;--okbg:#123a30;--bub:#232869;--me:#1f5a45}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-weight:500;font-size:17px;line-height:1.85}
-.w{max-width:760px;margin:0 auto;padding:0 20px}
-section{padding:56px 0 8px}
-h2{font-size:clamp(23px,5vw,30px);line-height:1.4;margin:0 0 12px;font-weight:900}
-h3{font-size:19px;margin:0 0 4px;font-weight:900}
-p{margin:0 0 1em;max-width:36em}
-a{color:var(--pri)}
-:focus-visible{outline:3px solid var(--warn);outline-offset:3px}
-.hero{padding:40px 0 24px}
-.hero .w{display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
-@media(min-width:760px){.hero .w{grid-template-columns:1.25fr 1fr;max-width:960px}}
-.tag{display:inline-block;background:var(--sun);color:#151a4a;font-weight:900;padding:4px 14px;border-radius:99px;font-size:15px;margin-bottom:16px}
-h1{font-size:clamp(32px,8vw,52px);line-height:1.25;margin:0 0 16px;font-weight:900}
-.sub{font-size:19px;font-weight:700;color:var(--sub)}
-.phone{width:min(290px,100%);margin:0 auto;background:var(--card);border:3px solid var(--fg);border-radius:32px;padding:14px 12px 18px;transform:rotate(3deg);box-shadow:8px 8px 0 var(--pri)}
-.phone .top{font-size:13px;font-weight:700;text-align:center;border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:10px}
-.phone .m{max-width:88%;padding:7px 11px;border-radius:14px;background:var(--bub);font-size:14px;line-height:1.5;margin:0 0 8px}
-.phone .m.me{margin-left:auto;background:var(--me)}
-.phone .n{font-size:11px;color:var(--sub);margin:0 0 1px 4px}
-.alert{display:flex;gap:8px;background:var(--warn);color:#fff;font-weight:900;font-size:14px;border-radius:12px;padding:8px 12px;margin-top:10px;line-height:1.5}
-.who{font-size:15px;margin-top:20px;padding:10px 16px;border:2px dashed var(--pri);border-radius:14px;display:inline-block}
-.lead{font-size:20px;font-weight:900;line-height:1.6}
-.three{display:grid;gap:10px;margin:18px 0;padding:0;list-style:none}
-.three li{background:var(--card);border-radius:14px;padding:12px 16px;border:2px solid var(--line)}
-.steps{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px;counter-reset:s}
-.steps li{position:relative;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px 16px 14px 64px;counter-increment:s}
-.steps li::before{content:counter(s);position:absolute;left:14px;top:14px;width:36px;height:36px;border-radius:50%;background:var(--pri);color:var(--pri-t);display:grid;place-items:center;font-weight:900}
-.steps li:last-child{border-color:var(--warn);background:var(--warnbg)}
-.steps small{color:var(--sub);font-weight:700;font-size:14px}
-.signs{list-style:none;padding:0;margin:20px 0;display:grid;gap:12px}
-.signs li{display:flex;gap:14px;background:var(--warnbg);border-left:8px solid var(--warn);border-radius:0 14px 14px 0;padding:14px 16px}
-.signs .i{font-size:28px;line-height:1.3}
-.set{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px}
-.set li{display:grid;grid-template-columns:1fr;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px}
-@media(min-width:600px){.set li{grid-template-columns:1fr 210px;align-items:center}}
-.scr{background:var(--bg);border:2px solid var(--fg);border-radius:14px;padding:10px 12px;font-size:14px}
-.scr .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);gap:8px}
-.scr .row:last-child{border:0}
-.scr .hl{background:var(--sun);color:#151a4a;border-radius:8px;padding:4px 8px;font-weight:900}
-.tg{width:38px;height:22px;border-radius:99px;background:#9aa0c8;position:relative;flex:none}
-.tg::after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;border-radius:50%;background:#fff}
-.rules{display:grid;gap:12px;margin:18px 0;padding:0;list-style:none}
-.rules li{background:var(--card);border-radius:14px;padding:14px 16px;border:2px solid var(--line)}
-.rules b{color:var(--warn)}
-.tel{display:grid;gap:12px;margin:18px 0}
-.tel a{display:block;text-decoration:none;background:var(--pri);color:var(--pri-t);border-radius:16px;padding:14px 18px;font-weight:900;line-height:1.4}
-.tel .num{font-size:34px;display:block}
-.tel span.s{font-size:14px;font-weight:700;opacity:.92}
-.tel a.p{background:var(--fg);color:var(--bg)}
-.share{display:grid;gap:12px;margin:18px 0}
-.btn{font:inherit;font-weight:900;font-size:17px;border:0;border-radius:14px;padding:14px 18px;cursor:pointer;text-align:center;text-decoration:none;display:block;color:#fff;background:#0f8f4a}
-.btn.g{background:var(--card);color:var(--fg);border:2px solid var(--fg)}
-#msg{font-size:14px;color:var(--sub);min-height:1.6em}
-.q{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:16px;margin:0 0 14px}
-.q p{font-weight:900;margin-bottom:10px}
-.opts{display:flex;flex-wrap:wrap;gap:8px}
-.opt{font:inherit;font-weight:700;background:var(--bg);color:var(--fg);border:2px solid var(--line);border-radius:12px;padding:10px 16px;cursor:pointer}
-.opt[aria-pressed="true"]{border-color:var(--pri);background:var(--pri);color:var(--pri-t)}
-.fb{display:none;margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--okbg);border-left:6px solid var(--ok);font-size:15.5px;line-height:1.7}
-.fb.ng{background:var(--warnbg);border-color:var(--warn)}
-.fb.show{display:block}
-#score{font-weight:900;font-size:18px}
-footer{margin-top:56px;padding:20px 0 40px;font-size:14px;color:var(--sub);border-top:2px solid var(--line)}
-@media (prefers-reduced-motion:no-preference){.phone{animation:tilt 1.2s ease-out}@keyframes tilt{from{transform:rotate(-4deg) translateY(12px);opacity:0}}}
+:root{
+  --bg: #050508;
+  --fg: #00ffcc;
+  --sub: #ff0055;
+  --card: rgba(10, 15, 24, 0.85);
+  --line: #00ffcc;
+  --pri: #ff00ea;
+  --pri-t: #050508;
+  --warn: #ff003c;
+  --warnbg: rgba(255, 0, 60, 0.15);
+  --sun: #fcee0a;
+  --ok: #00ff66;
+  --okbg: rgba(0, 255, 102, 0.15);
+  --bub: rgba(0, 255, 204, 0.1);
+  --me: rgba(255, 0, 234, 0.2);
+  box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+*{box-sizing: border-box;}
+body{
+  margin: 0;
+  background-color: var(--bg);
+  background-image: 
+    linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--fg);
+  font-family: 'Share Tech Mono', 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.85;
+  text-shadow: 0 0 3px rgba(0, 255, 204, 0.4);
+}
+.w{max-width: 760px; margin: 0 auto; padding: 0 20px;}
+section{padding: 56px 0 24px; border-bottom: 1px dashed rgba(0, 255, 204, 0.3);}
+h2{font-size: clamp(23px, 5vw, 28px); line-height: 1.4; margin: 0 0 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; color: var(--pri); text-shadow: 0 0 8px var(--pri);}
+h2::before{content: ">> "; color: var(--fg);}
+h3{font-size: 19px; margin: 0 0 8px; font-weight: 700; color: var(--sun);}
+p{margin: 0 0 1em; max-width: 36em;}
+a{color: var(--pri); text-decoration: none; text-shadow: 0 0 5px var(--pri);}
+a:hover{color: var(--fg); text-shadow: 0 0 5px var(--fg);}
+:focus-visible{outline: 2px solid var(--warn); outline-offset: 2px;}
+.hero{padding: 60px 0 40px; border-bottom: 2px solid var(--pri); position: relative; background: linear-gradient(180deg, rgba(255,0,234,0.1) 0%, transparent 100%);}
+.hero .w{display: grid; gap: 40px; grid-template-columns: 1fr; align-items: center;}
+@media(min-width: 760px){.hero .w{grid-template-columns: 1.25fr 1fr; max-width: 960px;}}
+.tag{display: inline-block; background: var(--warn); color: #fff; font-weight: 900; padding: 4px 14px; font-size: 14px; margin-bottom: 16px; letter-spacing: 1px; box-shadow: 0 0 10px var(--warn);}
+h1{font-size: clamp(32px, 8vw, 48px); line-height: 1.25; margin: 0 0 16px; font-weight: 900; text-shadow: 0 0 10px var(--fg); letter-spacing: 1px;}
+.sub{font-size: 18px; font-weight: 700; color: var(--sub); text-shadow: 0 0 5px var(--sub);}
+.phone{width: min(320px, 100%); margin: 0 auto; background: var(--card); border: 1px solid var(--line); padding: 14px 12px 18px; box-shadow: inset 0 0 20px rgba(0, 255, 204, 0.1), 0 0 15px rgba(0, 255, 204, 0.2); position: relative;}
+.phone::before{content: "SYS.COMM.LINK_ACTIVE"; position: absolute; top: -10px; left: 10px; background: var(--bg); padding: 0 5px; font-size: 10px; color: var(--pri);}
+.phone .top{font-size: 13px; font-weight: 700; text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 12px; letter-spacing: 2px;}
+.phone .m{max-width: 88%; padding: 7px 11px; background: var(--bub); font-size: 14px; line-height: 1.5; margin: 0 0 10px; border-left: 3px solid var(--line);}
+.phone .m.me{margin-left: auto; background: var(--me); border-left: none; border-right: 3px solid var(--pri);}
+.phone .n{font-size: 11px; color: var(--sub); margin: 0 0 2px 4px; font-family: 'Share Tech Mono', monospace;}
+.alert{display: flex; gap: 8px; background: rgba(255,0,60,0.8); color: #fff; font-weight: 900; font-size: 13px; padding: 8px 12px; margin-top: 15px; border: 1px solid var(--warn); box-shadow: 0 0 10px var(--warn);}
+.who{font-size: 15px; margin-top: 20px; padding: 10px 16px; border: 1px solid var(--sub); display: inline-block; background: rgba(255,0,85,0.1);}
+.lead{font-size: 20px; font-weight: 900; line-height: 1.6; color: var(--sun); text-shadow: 0 0 5px var(--sun);}
+.three{display: grid; gap: 12px; margin: 18px 0; padding: 0; list-style: none;}
+.three li{background: var(--card); padding: 12px 16px; border: 1px solid var(--line); border-left: 4px solid var(--pri);}
+.steps{list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 16px; counter-reset: s;}
+.steps li{position: relative; background: var(--card); border: 1px solid var(--line); padding: 16px 16px 14px 64px; counter-increment: s; box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.05);}
+.steps li::before{content: "0" counter(s); position: absolute; left: 14px; top: 14px; font-family: 'Share Tech Mono', monospace; font-size: 20px; color: var(--pri); font-weight: 900; text-shadow: 0 0 5px var(--pri);}
+.steps li:last-child{border-color: var(--warn); background: var(--warnbg); box-shadow: inset 0 0 10px rgba(255,0,60,0.2);}
+.steps small{color: rgba(255,255,255,0.6); font-size: 14px;}
+.signs{list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 12px;}
+.signs li{display: flex; gap: 14px; background: var(--warnbg); border: 1px solid var(--warn); border-left: 6px solid var(--warn); padding: 14px 16px;}
+.set{list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 16px;}
+.set li{display: grid; grid-template-columns: 1fr; gap: 14px; background: var(--card); border: 1px solid rgba(0,255,204,0.3); padding: 16px;}
+@media(min-width: 600px){.set li{grid-template-columns: 1fr 220px; align-items: center;}}
+.scr{background: #000; border: 1px solid var(--sub); padding: 10px 12px; font-size: 13px; font-family: 'Share Tech Mono', monospace;}
+.scr .row{display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(255,0,85,0.3); gap: 8px;}
+.scr .row:last-child{border: 0;}
+.scr .hl{background: rgba(255,0,85,0.2); color: var(--sub); padding: 2px 6px; font-weight: 700; border: 1px solid var(--sub);}
+.tg{width: 38px; height: 18px; border: 1px solid var(--sub); background: transparent; position: relative; flex: none;}
+.tg::after{content: ""; position: absolute; left: 2px; top: 2px; width: 12px; height: 12px; background: var(--sub);}
+.rules{display: grid; gap: 12px; margin: 18px 0; padding: 0; list-style: none;}
+.rules li{background: var(--card); padding: 14px 16px; border: 1px solid rgba(252, 238, 10, 0.4); border-left: 4px solid var(--sun);}
+.rules b{color: var(--sun); text-shadow: 0 0 5px var(--sun);}
+.tel{display: grid; gap: 14px; margin: 24px 0;}
+.tel a{display: block; text-decoration: none; background: rgba(255,0,234,0.1); color: var(--pri); border: 1px solid var(--pri); padding: 16px 18px; font-weight: 900; line-height: 1.4; text-align: center; transition: all 0.2s;}
+.tel a:hover{background: var(--pri); color: var(--pri-t); box-shadow: 0 0 15px var(--pri);}
+.tel .num{font-size: 38px; display: block; font-family: 'Share Tech Mono', monospace; text-shadow: none;}
+.tel span.s{font-size: 13px; font-weight: 400; opacity: 0.9; letter-spacing: 1px;}
+.tel a.p{background: rgba(0,255,204,0.1); color: var(--fg); border-color: var(--line);}
+.tel a.p:hover{background: var(--fg); color: var(--bg); box-shadow: 0 0 15px var(--fg);}
+.share{display: grid; gap: 12px; margin: 18px 0;}
+.btn{font: inherit; font-weight: 900; font-size: 16px; border: 1px solid var(--ok); padding: 14px 18px; cursor: pointer; text-align: center; text-decoration: none; display: block; color: var(--ok); background: rgba(0,255,102,0.1); text-transform: uppercase; transition: all 0.2s;}
+.btn:hover{background: var(--ok); color: #000; box-shadow: 0 0 15px var(--ok);}
+.btn.g{background: transparent; color: var(--fg); border: 1px solid var(--fg);}
+.btn.g:hover{background: var(--fg); color: #000; box-shadow: 0 0 15px var(--fg);}
+#msg{font-size: 14px; color: var(--sub); min-height: 1.6em; font-family: 'Share Tech Mono', monospace;}
+.q{background: var(--card); border: 1px solid var(--line); padding: 16px; margin: 0 0 16px; position: relative;}
+.q::after{content: ""; position: absolute; top: 0; right: 0; width: 20px; height: 20px; border-top: 2px solid var(--line); border-right: 2px solid var(--line);}
+.q::before{content: ""; position: absolute; bottom: 0; left: 0; width: 20px; height: 20px; border-bottom: 2px solid var(--line); border-left: 2px solid var(--line);}
+.q p{font-weight: 700; margin-bottom: 12px; color: var(--sun);}
+.opts{display: flex; flex-wrap: wrap; gap: 10px;}
+.opt{font: inherit; font-weight: 700; background: transparent; color: var(--fg); border: 1px solid var(--fg); padding: 8px 16px; cursor: pointer; transition: all 0.2s; font-size: 15px;}
+.opt:hover{background: rgba(0,255,204,0.2); box-shadow: 0 0 10px var(--fg);}
+.opt[aria-pressed="true"]{border-color: var(--pri); background: var(--pri); color: var(--pri-t); box-shadow: 0 0 10px var(--pri);}
+.fb{display: none; margin-top: 14px; padding: 12px 14px; background: var(--okbg); border: 1px solid var(--ok); font-size: 15px; line-height: 1.7; color: var(--ok);}
+.fb.ng{background: var(--warnbg); border-color: var(--warn); color: var(--warn);}
+.fb.show{display: block; animation: scanline 0.5s ease-out;}
+#score{font-weight: 900; font-size: 18px; color: var(--pri); margin-top: 20px; text-shadow: 0 0 5px var(--pri);}
+footer{margin-top: 56px; padding: 20px 0 40px; font-size: 13px; color: rgba(255,255,255,0.5); border-top: 1px dashed var(--line); text-align: center; font-family: 'Share Tech Mono', monospace;}
+
+@keyframes scanline {
+  0% { opacity: 0; transform: translateY(-5px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference){
+  .alert span:first-child{animation: blink 1s infinite step-end;}
+}
+@keyframes blink { 50% { opacity: 0; } }
 </style>
 </head>
 <body>
 
 <header class="hero"><div class="w">
 <div>
-<span class="tag">10代〜20代のあなたや、大切な友人・家族へ</span>
-<h1>身近な人を守る！SNS型投資詐欺の罠と対策</h1>
-<p class="sub">LINEグループに誘われたら要注意。知っておくべき3つの防犯ポイント</p>
-<p class="who">手口を知る ／ 設定を変える ／ すぐ相談する</p>
+<span class="tag">SYSTEM_ALERT // 10代〜20代対象</span>
+<h1>身近な人を守る！<br>SNS型投資詐欺の罠と対策</h1>
+<p class="sub">UNKNOWN_LINE_GROUP_DETECTED. 知っておくべき3つの防犯プロトコル</p>
+<p class="who">手口の解析 ／ セキュリティ設定 ／ 緊急アクセスポート</p>
 </div>
-<div class="phone" role="img" aria-label="LINEグループで儲け話が盛り上がっているスマホ画面のイラスト。注意の表示が出ている">
-<div class="top"> 投資勉強会（128人）</div>
-<div class="n">先生</div><div class="m">今日も全員プラスです！</div>
-<div class="n">みさき</div><div class="m">先生のおかげで+40万円！</div>
+<div class="phone" role="img" aria-label="LINEグループで儲け話が盛り上がっている端末画面。ハッキング警告の表示が出ている">
+<div class="top">SEC_LEVEL_0 // 投資勉強会（128人）</div>
+<div class="n">ID: SENSEI</div><div class="m">今日も全員プラスです！</div>
+<div class="n">ID: MISAKI</div><div class="m">先生のおかげで+40万円！</div>
 <div class="m me">私も始めたいです</div>
-<div class="alert"><span>⚠️</span><span>みんなが儲かっている？ 全員サクラかも</span></div>
+<div class="alert"><span>! ERR !</span><span>不自然な利益報告を検知。サクラの可能性大</span></div>
 </div>
 </div></header>
 
 <main class="w">
 <section id="intro">
-<h2>知らないLINEグループに突然追加されたことはありませんか？</h2>
-<p class="lead">「絶対に儲かる」は、あなたのお金が目的のセリフです。</p>
-<p>最近、SNSの広告やDMから「絶対儲かる投資」に誘導され、数百万〜数千万円をだまし取られる被害が相次いでいます。</p>
-<p>自分は大丈夫と思っていても、巧妙な手口で信じてしまいます。このページで、手口と予防策を3分で確認しましょう。</p>
+<h2>UNAUTHORIZED_ACCESS_DETECTED</h2>
+<p class="lead">「絶対に儲かる」は、あなたの資産を狙う不正スクリプトです。</p>
+<p>最近、SNSの広告やDMから「絶対儲かる投資」に誘導され、巨額をだまし取られる被害が相次いでいます。</p>
+<p>自分は大丈夫と思っていても、巧妙なソーシャルエンジニアリングで信じてしまいます。このシステムで、手口と防犯プロトコルを3分でインストールしましょう。</p>
 <ul class="three">
-<li><b>ポイント1</b>　手口を知る（→ <a href="#steps">4ステップ</a>と<a href="#signs">危険サイン</a>）</li>
-<li><b>ポイント2</b>　LINEの設定を変える（→ <a href="#line">設定方法</a>）</li>
-<li><b>ポイント3</b>　困ったらすぐ相談する（→ <a href="#help">相談窓口</a>）</li>
+<li><b>PROTOCOL 1</b>　手口の解析（→ <a href="#steps">4つのフェーズ</a>と<a href="#signs">危険シグナル</a>）</li>
+<li><b>PROTOCOL 2</b>　セキュリティ設定（→ <a href="#line">LINE防御設定</a>）</li>
+<li><b>PROTOCOL 3</b>　緊急アクセス（→ <a href="#help">相談ポート</a>）</li>
 </ul>
 </section>
 
 <section id="steps">
-<h2>詐欺の4ステップ</h2>
-<p>ほとんどの被害は、この順番で進みます。</p>
+<h2>FRAUD_EXECUTION_PHASES</h2>
+<p>攻撃は通常、以下のプロセスで実行されます。</p>
 <ol class="steps">
-<li><h3>接点</h3>SNS広告やDMから、LINEグループへ誘導されます。<br><small>有名人の写真や名前が、無断で使われていることもあります。</small></li>
-<li><h3>信用づくり</h3>グループには多数の「サクラ（仲間役）」がいて、「儲かった！」「先生のおかげです！」と全員で盛り上げます。<br><small>あなたを「乗り遅れたくない」気持ちにさせるための演出です。</small></li>
-<li><h3>誘導・送金</h3>アプリや偽サイトで、うその利益を見せて振込を促します。<br><small>画面の数字は作り物です。</small></li>
-<li><h3>破綻</h3>出金しようとすると、「手数料」や「税金」を追加で請求され、最後は連絡が取れなくなります。<br><small>払っても、お金は戻りません。</small></li>
+<li><h3>INITIAL_CONTACT（接点）</h3>SNS広告やDMから、LINEグループへ誘導されます。<br><small>有名人の画像がディープフェイクや無断転載で使われることがあります。</small></li>
+<li><h3>TRUST_BUILDING（信用構築）</h3>グループには多数の「ボット/サクラ」が潜伏し、「儲かった」と全ログを埋め尽くします。<br><small>人間の「乗り遅れたくない」というバグを突くための演出です。</small></li>
+<li><h3>INDUCTION_TRANSFER（誘導・送金）</h3>ダミーのアプリや偽サイトで、架空の利益を表示し送金を促します。<br><small>画面上の数字は単なるフロントエンドのモックです。</small></li>
+<li><h3>SYSTEM_CRASH（破綻）</h3>出金リクエストを送ると、「システム手数料」や「税金」名目で追加送金を要求され、最終的にアカウントがデリートされます。<br><small>課金しても、データ（資金）は復元されません。</small></li>
 </ol>
 </section>
 
 <section id="signs">
-<h2>危険サインのチェックリスト</h2>
-<p>ひとつでも当てはまったら、お金を動かす前に止まってください。</p>
+<h2>DANGER_SIGNALS</h2>
+<p>以下の異常値が1つでも検出されたら、直ちにトランザクションを停止してください。</p>
 <ul class="signs">
-<li><span class="i"></span><div><h3>サイン1：「先生」を持ち上げる書き込みが多い</h3>グループ内で「先生」「アナリスト」と呼ばれる人物を、何人もがほめ続けています。</div></li>
-<li><span class="i"></span><div><h3>サイン2：振込先が個人名義、または無関係な法人名義</h3>投資会社と関係のない名前の口座は、詐欺を疑ってください。口座名義は毎回変わることもあります。</div></li>
-<li><span class="i"></span><div><h3>サイン3：出金に「手数料・税金を先に振り込んで」と言われる</h3>これは典型的な詐欺の請求です。払わずに、相談窓口へ連絡してください。</div></li>
-<li><span class="i"></span><div><h3>おまけ：「今日まで」「あと3名」と急がされる</h3>考える時間をなくすための決まり文句です。</div></li>
+<li><div><h3>SIGNAL 01：「先生」を崇拝する不自然なログ</h3>グループ内で「先生」「アナリスト」と呼ばれる単一ノードを、多数のアカウントが賛美し続けています。</div></li>
+<li><div><h3>SIGNAL 02：送金先が個人、または無関係な法人</h3>投資プラットフォームと一致しない名義の口座は、ブラックホールの可能性大です。口座名義は頻繁にローテーションされます。</div></li>
+<li><div><h3>SIGNAL 03：出金時の「先行手数料」要求</h3>これは詐欺特有の悪意あるリクエストです。承認せず、即座に相談ポートへ接続してください。</div></li>
+<li><div><h3>EXTRA：「今日まで」「あと3名」というタイムリミット</h3>思考リソースを奪うための古典的なハッキング手法です。</div></li>
 </ul>
 </section>
 
 <section id="line">
-<h2>今すぐできる防犯策：LINEの設定</h2>
-<p>知らない人とつながる入口を、先に閉じておきましょう。1分で終わります。</p>
+<h2>DEFENSE_SETUP: LINE_SECURITY</h2>
+<p>外部からの不正アクセスポータルを物理的に遮断します。所要時間：60秒。</p>
 <ol class="set">
-<li><div><h3>1. 設定（歯車マーク）を開く</h3>LINEの「ホーム」画面の右上にある歯車マークをタップします。</div>
+<li><div><h3>STEP 1. コンフィグ（歯車）にアクセス</h3>LINEの「ホーム」画面右上、歯車アイコンをタップします。</div>
 <div class="scr"><div class="row"><span> プロフィール</span></div><div class="row"><span class="hl"> 設定</span></div></div></li>
-<li><div><h3>2. 「友だち」を選ぶ</h3>設定の一覧から「友だち」をタップします。</div>
+<li><div><h3>STEP 2. 「友だち」ディレクトリを選択</h3>設定ルートから「友だち」を展開します。</div>
 <div class="scr"><div class="row"><span>アカウント</span></div><div class="row"><span class="hl">友だち</span></div><div class="row"><span>トーク</span></div></div></li>
-<li><div><h3>3. 2つの項目をオフにする</h3>「友だち自動追加」と「友だちへの追加を許可」をオフにします。</div>
+<li><div><h3>STEP 3. 自動追加機能を無効化</h3>「友だち自動追加」と「友だちへの追加を許可」のフラグを[OFF]にします。</div>
 <div class="scr"><div class="row"><span class="hl">友だち自動追加</span><span class="tg"></span></div><div class="row"><span class="hl">友だちへの追加を許可</span><span class="tg"></span></div></div></li>
-<li><div><h3>4. ID検索を制限する</h3>設定の「プライバシー管理」を開き、「IDによる友だち追加を許可」をオフにします。</div>
+<li><div><h3>STEP 4. IDサーチのブロック</h3>設定の「プライバシー管理」から、「IDによる友だち追加を許可」を[OFF]にします。</div>
 <div class="scr"><div class="row"><span>プライバシー管理</span></div><div class="row"><span class="hl">IDによる友だち追加を許可</span><span class="tg"></span></div></div></li>
 </ol>
-<p><small>※アプリの更新で、項目名や場所が変わることがあります。見つからないときは、設定画面の検索で「友だち」や「ID」を探してください。</small></p>
+<p><small>※バージョン更新によりディレクトリ構造が変化する場合があります。見つからない場合は検索クエリで「友だち」「ID」を実行してください。</small></p>
 </section>
 
 <section id="help">
-<h2>対処法・相談窓口</h2>
-<h3>3つの鉄則</h3>
+<h2>EMERGENCY_PORTS</h2>
+<h3>3つの鉄則（CORE_RULES）</h3>
 <ul class="rules">
-<li><b>追加送金は絶対にしない。</b>手数料を払っても、お金は戻りません。</li>
-<li><b>証拠を残す。</b>やり取りのスクリーンショットや振込明細を保存します。相手のアカウント名やURLも控えてください。</li>
-<li><b>すぐに相談する。</b>恥ずかしいことではありません。だまされるのは、手口が巧妙だからです。</li>
+<li><b>追加送金は絶対に実行しない。</b>要求に応じても資金は返還されません。</li>
+<li><b>ログを保存する。</b>トーク履歴のスクリーンショット、トランザクション明細をローカルに保存。相手のIDやURLも記録してください。</li>
+<li><b>直ちにサポートへ接続。</b>エラーはシステムの仕様を突かれた結果です。恥じる必要はありません。</li>
 </ul>
 <div class="tel">
-<a href="tel:188"><span class="num">188</span>消費者ホットライン（いやや！）<br><span class="s">タップして発信。近くの消費生活センターにつながります</span></a>
-<a href="tel:%239110" class="p"><span class="num">#9110</span>警察相談専用電話<br><span class="s">タップして発信。被害の相談や手口の確認に</span></a>
+<a href="tel:188"><span class="num">PORT: 188</span>消費者ホットライン（いやや！）<br><span class="s">タップでダイヤル。最寄りの消費生活センターへルーティングされます</span></a>
+<a href="tel:%239110" class="p"><span class="num">PORT: #9110</span>警察相談専用ライン<br><span class="s">タップでダイヤル。被害相談やプロトコルの確認に</span></a>
 </div>
-<p>いま危険が迫っているときは、迷わず110番へ。すでに振り込んだ場合は、振込先の銀行にも早めに連絡してください。</p>
+<p>現在、物理的な脅威が迫っている場合は迷わず[110]へアクセス。すでに送金済みの場合は、該当バンクの緊急窓口へ直ちにコンタクトしてください。</p>
 </section>
 
 <section id="share">
-<h2>詐欺の手口を知っておくだけで、自分や大切な友人を守れます</h2>
-<p>このページを、まだ知らない人に送ってください。</p>
+<h2>SHARE_PROTOCOL</h2>
+<p>手口のアルゴリズムを共有するだけで、ネットワーク全体を防御できます。未インストールのユーザーへ送信してください。</p>
 <div class="share">
-<a class="btn" id="l1" target="_blank" rel="noopener">LINEで大切な友人に教える</a>
-<a class="btn" id="l2" target="_blank" rel="noopener">家族LINEに共有する</a>
-<button class="btn g" id="cp" type="button">リンクをコピーする</button>
+<a class="btn" id="l1" target="_blank" rel="noopener">LINEでフレンドに転送</a>
+<a class="btn" id="l2" target="_blank" rel="noopener">ファミリー・ネットワークへ共有</a>
+<button class="btn g" id="cp" type="button">URLをクリップボードにコピー</button>
 </div>
 <div id="msg" role="status" aria-live="polite"></div>
 </section>
 
 <section id="quiz">
-<h2>理解度チェック（3問）</h2>
-<p>選ぶとすぐに解説が出ます。回答はこの端末の画面内だけで判定し、送信や保存はしません。</p>
+<h2>SYSTEM_TEST (3_TASKS)</h2>
+<p>選択後、即座にフィードバックが返されます。データはローカルで処理され、外部サーバーへは送信されません。</p>
 
-<div class="q" data-ans="0"><p>Q1．投資の振込先が「個人名義」の場合、どう判断しますか？</p>
+<div class="q" data-ans="0"><p>TASK 01：投資の送金先が「個人名義」の場合の正しいジャッジは？</p>
 <div class="opts"><button class="opt" type="button" aria-pressed="false">詐欺を疑う</button><button class="opt" type="button" aria-pressed="false">問題ない</button></div>
-<div class="fb" data-ok="正解です。個人名義の口座への振込を求める投資話は、詐欺の典型です。" data-ng="残念。個人名義の口座を指定する投資話は、詐欺を強く疑ってください。"></div></div>
+<div class="fb" data-ok="[SUCCESS] 正解です。個人口座への送金要求は、典型的な詐欺の手口です。" data-ng="[FAILED] 警告。個人口座を指定する投資話は、詐欺の可能性が極めて高いです。"></div></div>
 
-<div class="q" data-ans="0"><p>Q2．困ったときの消費者ホットラインの番号は？</p>
+<div class="q" data-ans="0"><p>TASK 02：トラブル時の消費者ホットラインのポート番号は？</p>
 <div class="opts"><button class="opt" type="button" aria-pressed="false">188</button><button class="opt" type="button" aria-pressed="false">110</button></div>
-<div class="fb" data-ok="正解です。188（いやや！）は消費者ホットライン。110は警察の緊急通報です。" data-ng="188が消費者ホットラインです。110は警察への緊急通報なので、使い分けましょう。"></div></div>
+<div class="fb" data-ok="[SUCCESS] 正解。188（いやや！）は消費者ホットライン。110は警察の緊急通報ポートです。" data-ng="[FAILED] 188が消費者ホットラインです。110は緊急性が高い場合の警察通報用です。"></div></div>
 
-<div class="q" data-ans="-1"><p>Q3．LINEの自動追加設定をオフにしましたか？</p>
-<div class="opts"><button class="opt" type="button" aria-pressed="false">した</button><button class="opt" type="button" aria-pressed="false">もともとしていた</button><button class="opt" type="button" aria-pressed="false">あとでする</button></div>
-<div class="fb" data-ok="いいですね。その設定を、家族や友人にも教えてあげてください。" data-ng="「あとで」は忘れがちです。<a href='#line'>設定の手順</a>を見ながら、いま1分で済ませましょう。"></div></div>
+<div class="q" data-ans="-1"><p>TASK 03：LINEの自動追加設定の無効化（OFF）は完了しましたか？</p>
+<div class="opts"><button class="opt" type="button" aria-pressed="false">完了</button><button class="opt" type="button" aria-pressed="false">元々OFF</button><button class="opt" type="button" aria-pressed="false">後で実行</button></div>
+<div class="fb" data-ok="[SUCCESS] 素晴らしい。そのセキュリティ設定を、他のユーザーにもシェアしてください。" data-ng="[FAILED] 「後で」は脆弱性を放置する行為です。<a href='#line'>防御設定の手順</a>を参照し、今すぐ実行してください。"></div></div>
 
 <p id="score" role="status" aria-live="polite"></p>
 </section>
 </main>
 
-<div class="w"><footer>この情報は一般的な注意喚起です。個別の被害や法律の判断は、警察、消費生活センター、弁護士などの専門窓口にご相談ください。</footer></div>
+<div class="w"><footer>[ SYSTEM_DISCLAIMER ]<br>この情報は一般的なセキュリティ・アラートです。個別の被害や法的ジャッジは、警察、消費生活センター、弁護士などの専門機関へアクセスしてください。</footer></div>
 
 <script>
-var url=location.href,ttl='SNS型投資詐欺の手口と対策、3分で読めるよ。知らないLINEグループに誘われたら要注意！';
+var url=location.href,ttl='【WARNING】SNS型投資詐欺の手口と対策プロトコル。知らないLINEグループへの追加は警戒せよ！';
 function ln(t){return 'https://line.me/R/share?text='+encodeURIComponent(t+'\n'+url)}
 document.getElementById('l1').href=ln(ttl);
-document.getElementById('l2').href=ln('家族へ：SNSやLINEの「必ず儲かる」投資話は詐欺のことが多いそうです。手口と相談先がまとまっているので見ておいてね。');
+document.getElementById('l2').href=ln('家族へ：SNSやLINEの「必ず儲かる」投資話は詐欺（悪意あるスクリプト）の確率大。手口と相談先がまとまっているのでインストール（確認）しておいて。');
 document.getElementById('cp').addEventListener('click',function(){
   var m=document.getElementById('msg');
-  try{navigator.clipboard.writeText(url).then(function(){m.textContent='リンクをコピーしました。'},function(){m.textContent='コピーできませんでした。アドレスバーのURLをコピーしてください。'})}
-  catch(e){m.textContent='コピーできませんでした。アドレスバーのURLをコピーしてください。'}
+  try{navigator.clipboard.writeText(url).then(function(){m.textContent='> リンクをクリップボードにコピーしました。';},function(){m.textContent='> コピー失敗。アドレスバーのURLを手動でコピーしてください。';})}
+  catch(e){m.textContent='> コピー失敗。アドレスバーのURLを手動でコピーしてください。';}
 });
 var qs=document.querySelectorAll('.q');
 function tally(){
   var a=0,c=0;
   qs.forEach(function(q){if(q.dataset.done){a++;if(q.dataset.right==='1')c++}});
-  if(a===qs.length){document.getElementById('score').textContent='結果：'+c+' / 3 問が理解できています。'+(c===3?'バッチリです！':'解説を読み返して、周りにも教えてあげましょう。')}
+  if(a===qs.length){document.getElementById('score').textContent='> DIAGNOSTIC_RESULT: '+c+' / 3 TASKS CLEARED. '+(c===3?'システム理解度は完璧です。':'ログを再確認し、周囲のユーザーにも警告を発してください。')}
 }
 qs.forEach(function(q){
   var ans=parseInt(q.dataset.ans,10),bs=q.querySelectorAll('.opt'),fb=q.querySelector('.fb');
@@ -228,3 +271,4 @@ qs.forEach(function(q){
 </script>
 </body>
 </html>
+
